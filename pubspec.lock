@@ -162,6 +162,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.2"
+  data:
+    dependency: "direct main"
+    description:
+      name: data
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0"
   dio:
     dependency: "direct main"
     description:
@@ -312,6 +319,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  more:
+    dependency: transitive
+    description:
+      name: more
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.5.0"
   package_config:
     dependency: transitive
     description:

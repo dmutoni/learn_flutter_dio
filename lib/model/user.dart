@@ -4,25 +4,40 @@ part 'user.g.dart';
 
 @JsonSerializable()
 class User {
-  @JsonKey(name: "id")
-  late int id;
+  User({
+    required this.data,
+  });
 
-  @JsonKey(name: "email")
-  late String email;
-
-  @JsonKey(name: "first_name")
-  late String firstName;
-
-  @JsonKey(name: "last_name")
-  late String lastName;
-
-  @JsonKey(name: "avatar")
-  late String avatar;
-
-  User();
+  Data data;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
-  /// Connect the generated [_$PersonToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$UserToJson(this);
+}
+
+class Data {
+  Data({
+    required this.id,
+    required this.email,
+    required this.firstName,
+    required this.lastName,
+  });
+
+  String id;
+  String email;
+  String firstName;
+  String lastName;
+
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
+        id: json["id"],
+        email: json["email"],
+        firstName: json["firstName"],
+        lastName: json["lastName"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "email": email,
+        "first_name": firstName,
+        "last_name": lastName,
+      };
 }
